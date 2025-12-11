@@ -13,7 +13,11 @@
     "szczesny","hernandez","deligt","degea","onana","lloris","vardy","hummels","dybala","pogba","beckham","antony","ederson","endrick",
     "guller","fati","sanchez","thiago","torres","leao","nene","ramos","costa","bergval","kimpembe","watkins","foden","mane","coutinho",
     "sancho","dzeko","phillips","havertz","mount","gnabry","navas","varane","asensio","nacho","isco","perisic","vidal","royal","zaha",
-    "mahrez","bissouma","hojberg","ozil","morata"
+    "mahrez","bissouma","hojberg","ozil","morata","mazraoui","rodri","hakimi","rice","isak","ekitike","guimaraes","joelinton","jesus",
+    "gabriel","marquinhos","valverde","odegaard","cannavaro","maldini","shevchenko","nedved","owen","rivaldo","sammer","weah","stoichkov",
+    "puskas","baggio","vanbasten","papin","matthaus","belanov","platini","beckenbauer","cruyff","charlton","distefano","totti","kahn",
+    "heungminson","etoo","lopez","olmo","cubarsi","kounde","christensen","elanga","musiala","olise","mendes","pacho","williams","greenwood",
+    "hincapie","adeyemi","tillman","doku","cherki","sessegnon","bentancur","vandeven","solomon","gill","terstegen","mascherano","jorginho"
   ].map(s => s.toLowerCase());
 
   const MAX_ATTEMPTS = 6;
