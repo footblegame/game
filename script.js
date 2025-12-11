@@ -343,22 +343,6 @@
 
     let html = "";
 
-    lengths.forEach(len => {
-      html += `<h3 style="margin-top:18px; text-align:center;">${len}-Letter Words</h3>`;
-
-      const sorted = byLength[len].sort();
-      let curLetter = "";
-
-      sorted.forEach(word => {
-        const first = word[0];
-        if (first !== curLetter) {
-          curLetter = first;
-          html += `<h4 style="margin:8px 0 4px; color:#8fd3ff;">${curLetter}</h4>`;
-        }
-        html += `<div>${word}</div>`;
-      });
-    });
-
     wordListBox.innerHTML = html;
   }
 
