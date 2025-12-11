@@ -18,7 +18,7 @@
     "puskas","baggio","vanbasten","papin","matthaus","belanov","platini","beckenbauer","cruyff","charlton","distefano","totti","kahn",
     "heungminson","etoo","lopez","olmo","cubarsi","kounde","christensen","elanga","musiala","olise","mendes","pacho","williams","greenwood",
     "hincapie","adeyemi","tillman","doku","cherki","sessegnon","bentancur","vandeven","solomon","gill","terstegen","mascherano","jorginho",
-    "estevao","martinelli","spence","roque","militao","rudiger","danilo","gravenberch"
+    "estevao","martinelli","spence","roque","militao","rudiger","danilo","firmino"
   ].map(s => s.toLowerCase());
 
   const MAX_ATTEMPTS = 6;
