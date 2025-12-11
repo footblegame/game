@@ -320,31 +320,53 @@
     });
   }
 
-  function loadWordList() {
-    const selected = lengthFilter.value;
+function loadWordList() {
+  const selected = lengthFilter.value;
 
-    const byLength = {};
-    ANS_WORDS.forEach(w => {
-      const len = w.length;
-      if (!byLength[len]) byLength[len] = [];
-      byLength[len].push(w.toUpperCase());
+  // Group words by length
+  const byLength = {};
+  ANS_WORDS.forEach(w => {
+    const len = w.length;
+    if (!byLength[len]) byLength[len] = [];
+    byLength[len].push(w.toUpperCase());
+  });
+
+  let lengths = Object.keys(byLength).map(Number).sort((a,b)=>a-b);
+  if (selected !== "all") {
+    lengths = lengths.filter(x => x == selected);
+  }
+
+  let html = "";
+  let totalCount = 0;
+
+  // Build list
+  lengths.forEach(len => {
+    html += `<h3 style="margin-top:18px; text-align:center;">${len}-Letter Words</h3>`;
+
+    const sorted = byLength[len].sort();
+    totalCount += sorted.length;
+
+    let curLetter = "";
+    sorted.forEach(word => {
+      const first = word[0];
+      if (first !== curLetter) {
+        curLetter = first;
+        html += `<h4 style="margin:8px 0 4px; color:#8fd3ff;">${curLetter}</h4>`;
+      }
+      html += `<div>${word}</div>`;
     });
-    wordListBox.innerHTML = html;
+  });
 
-    // -------- UPDATE THE WORD COUNT --------
-    const wordCountBox = document.getElementById("wordCount");
+  // Update the content
+  wordListBox.innerHTML = html;
+
+  // Update the count
+  const wordCountBox = document.getElementById("wordCount");
+  if (wordCountBox) {
     wordCountBox.textContent =
       `${totalCount} word${totalCount !== 1 ? "s" : ""} shown`;
   }
-
-
-    let lengths = Object.keys(byLength).map(Number).sort((a,b)=>a-b);
-    if (selected !== "all") lengths = lengths.filter(x => x == selected);
-
-    let html = "";
-
-    wordListBox.innerHTML = html;
-  }
+}
 
   popupBtn.addEventListener("click", () => {
     buildFilterOptions();
