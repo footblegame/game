@@ -10,7 +10,10 @@
     "kubo","cancelo","goodman","eriksen","casimiro","coman","kvicha","xhaka","maddison","mbuemo","balde","werner","bremer","kroos","xavi",
     "zidane","xabi","gullit","yashin","iniesta","casillas","scholes","rooney","company","aguero","cole","henry","davies","pele","maradona",
     "carlos","eusebio","figo","garrincha","ronaldinho","kaka","pique","alba","giroud","crouch","gerard","lampard","oblak","koke","sommer",
-    "szczesny"
+    "szczesny","hernandez","deligt","degea","onana","lloris","vardy","hummels","dybala","pogba","beckham","antony","ederson","endrick",
+    "guller","fati","sanchez","thiago","torres","leao","nene","ramos","costa","bergval","kimpembe","watkins","foden","mane","coutinho",
+    "sancho","dzeko","phillips","havertz","mount","gnabry","navas","varane","asensio","nacho","isco","perisic","vidal","royal","zaha",
+    "mahrez","bissouma","hojberg","ozil","morata"
   ].map(s => s.toLowerCase());
 
   const MAX_ATTEMPTS = 6;
